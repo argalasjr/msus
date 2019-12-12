@@ -3,105 +3,219 @@
 	<id>5</id>
 	<!-- TRANSACTIONS -->
 	<!-- ROLES -->
+    <role>
+        <id>admin</id>
+        <title>Admin</title>
+    </role>
+    <role>
+        <id>postar</id>
+        <title>Poštár</title>
+    </role>
+    <role>
+        <id>adresat</id>
+        <title>Adresát</title>
+    </role>
 	<!-- DATA -->
 	<!-- TRANSITIONS -->
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>14</id>
 		<x>1060</x>
 		<y>20</y>
 		<label>Áno (s doporučením)</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>15</id>
 		<x>1060</x>
 		<y>140</y>
 		<label>Nie (s doporučením)</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>23</id>
 		<x>740</x>
 		<y>540</y>
 		<label>Záasileka 1. a 2. triedy</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>27</id>
 		<x>1060</x>
 		<y>420</y>
 		<label>Áno (1. 2. trieda)</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>28</id>
 		<x>1060</x>
 		<y>580</y>
 		<label>Nie (1. 2. trieda)</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>31</id>
 		<x>620</x>
 		<y>300</y>
 		<label>Zásielka do vlastných rúk</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>33</id>
 		<x>1060</x>
 		<y>260</y>
 		<label>Áno (do vlastných rúk)</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>34</id>
 		<x>1060</x>
 		<y>340</y>
 		<label>Nie (do vlastných rúk)</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>37</id>
 		<x>1420</x>
 		<y>260</y>
 		<label>Áno (overenie adresáta)</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>38</id>
 		<x>1420</x>
 		<y>380</y>
 		<label>Nie (overenie aresáta)</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>42</id>
 		<x>660</x>
 		<y>740</y>
 		<label>Nadrozmerná zásielka</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>85</id>
 		<x>1660</x>
 		<y>340</y>
 		<label>Poslaná na poštu</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>89</id>
 		<x>1580</x>
 		<y>60</y>
 		<label>Prijatie</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>90</id>
 		<x>1620</x>
 		<y>220</y>
 		<label>Odmietnutie</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>106</id>
 		<x>1540</x>
 		<y>580</y>
 		<label>Chce reklamáciu</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>113</id>
 		<x>1620</x>
 		<y>460</y>
 		<label>Zistenie závady</label>
 	</transition>
 	<transition>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 		<id>116</id>
 		<x>580</x>
 		<y>100</y>
