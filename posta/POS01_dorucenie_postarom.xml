@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd">
 	<id>5</id>
+	<title>Admin</title>
 	<!-- TRANSACTIONS -->
 	<!-- ROLES -->
 	<role>
 		<id>admin</id>
 		<title>Admin</title>
 	</role>
+    <role>
+        <id>posta</id>
+        <title>Pošta</title>
+    </role>
+    <role>
+        <id>adresat</id>
+        <title>Adresát</title>
+    </role>
+    <role>
+        <id>postar</id>
+        <title>Poštár</title>
+    </role>
 	<!-- DATA -->
 	<!-- TRANSITIONS -->
 	<transition>
@@ -14,108 +27,324 @@
 		<x>1060</x>
 		<y>20</y>
 		<label>Spôsobilý adresát zastihnutý</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>15</id>
 		<x>1060</x>
 		<y>140</y>
 		<label>Spôsobilý adresát nezastihnutý</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>23</id>
 		<x>740</x>
 		<y>540</y>
 		<label>Záasileka 1. a 2. triedy</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>27</id>
 		<x>1060</x>
 		<y>420</y>
 		<label>Adresát zastihnutý</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>28</id>
 		<x>1060</x>
 		<y>580</y>
 		<label>Adresát nezastihnutý</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>31</id>
 		<x>620</x>
 		<y>300</y>
 		<label>Zásielka do vlastných rúk</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>33</id>
 		<x>1060</x>
 		<y>260</y>
 		<label>Konkrétny adresát zastihnutý</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>34</id>
 		<x>1060</x>
 		<y>340</y>
 		<label>Konkrétny adresát nezastihnutý</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>37</id>
 		<x>1460</x>
 		<y>306</y>
 		<label>Správne overenie adresáta</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>38</id>
 		<x>1366</x>
 		<y>401</y>
 		<label>Nesprávne overenie adresáta</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>42</id>
 		<x>660</x>
 		<y>740</y>
 		<label>Nadrozmerná zásielka</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>85</id>
 		<x>1675</x>
 		<y>374</y>
 		<label>Poslaná na poštu</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>89</id>
 		<x>1580</x>
 		<y>60</y>
 		<label>Prijatá zásielka</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>adresat</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>90</id>
 		<x>1629</x>
 		<y>247</y>
 		<label>Odmietnutá zásielka</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>adresat</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>106</id>
 		<x>1540</x>
 		<y>580</y>
 		<label>Chce reklamáciu</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>adresat</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>113</id>
 		<x>1620</x>
 		<y>460</y>
 		<label>Zistenie závady</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>adresat</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>116</id>
 		<x>580</x>
 		<y>100</y>
 		<label>Zásielka s doporučením</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>postar</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<transition>
 		<id>151</id>
 		<x>1930</x>
 		<y>367</y>
-		<label>Poslaná odielateľovi</label>
+		<label>Poslaná odosielateľovi</label>
+        <roleRef>
+            <id>admin</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
+        <roleRef>
+            <id>posta</id>
+            <logic>
+                <perform>true</perform>
+            </logic>
+        </roleRef>
 	</transition>
 	<!-- PLACES -->
 	<place>
@@ -408,13 +637,6 @@
 		<breakPoint><x>1500</x><y>780</y></breakPoint>
 	</arc>
 	<arc>
-		<id>102</id>
-		<type>regular</type>
-		<sourceId>28</sourceId>
-		<destinationId>40</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
 		<id>109</id>
 		<type>regular</type>
 		<sourceId>103</sourceId>
@@ -475,6 +697,13 @@
 		<type>regular</type>
 		<sourceId>151</sourceId>
 		<destinationId>152</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>189</id>
+		<type>regular</type>
+		<sourceId>28</sourceId>
+		<destinationId>43</destinationId>
 		<multiplicity>1</multiplicity>
 	</arc>
 </document>
