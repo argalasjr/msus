@@ -1,39 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd"?>
-<document>
-<place>
-<id>1</id>
-<x>110</x>
-<y>211</y>
-<label>Odmietnutá zásielka</label>
-<tokens>0</tokens>
-<static>false</static>
-</place>
-<place>
-<id>3</id>
-<x>597</x>
-<y>215</y>
-<label>Prijatie odosielateľom</label>
-<tokens>0</tokens>
-<static>false</static>
-</place>
-<transition>
-<id>2</id>
-<x>338</x>
-<y>213</y>
-<label>Poslanie zásielky odosielateľovi</label>
-</transition>
-<arc>
-<id>4</id>
-<type>regular</type>
-<sourceId>1</sourceId>
-<destinationId>2</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
-<arc>
-<id>5</id>
-<type>regular</type>
-<sourceId>2</sourceId>
-<destinationId>3</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd">
+	<id>1</id>
+	<!-- TRANSACTIONS -->
+	<!-- ROLES -->
+	<!-- DATA -->
+	<!-- TRANSITIONS -->
+	<transition>
+		<id>2</id>
+		<x>338</x>
+		<y>213</y>
+		<label>Poslanie zásielky odosielateľovi</label>
+	</transition>
+	<!-- PLACES -->
+	<place>
+		<id>1</id>
+		<x>110</x>
+		<y>211</y>
+		<label>Odmietnutá zásielka</label>
+		<tokens>0</tokens>
+		<static>false</static>
+	</place>
+	<place>
+		<id>3</id>
+		<x>597</x>
+		<y>215</y>
+		<label>Prijatie odosielateľom</label>
+		<tokens>0</tokens>
+		<static>false</static>
+	</place>
+	<!-- ARCS -->
+	<arc>
+		<id>4</id>
+		<type>regular</type>
+		<sourceId>1</sourceId>
+		<destinationId>2</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>5</id>
+		<type>regular</type>
+		<sourceId>2</sourceId>
+		<destinationId>3</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
 </document>

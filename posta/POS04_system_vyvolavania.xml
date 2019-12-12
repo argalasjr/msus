@@ -1,107 +1,114 @@
-<?xml version="1.0" encoding="UTF-8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd"?>
-<document>
-<place>
-<id>1</id>
-<x>67</x>
-<y>325</y>
-<label>Systém vyvolávania</label>
-<tokens>1</tokens>
-<static>false</static>
-</place>
-<place>
-<id>2</id>
-<x>419</x>
-<y>323</y>
-<label>Číslo</label>
-<tokens>0</tokens>
-<static>false</static>
-</place>
-<place>
-<id>3</id>
-<x>1070</x>
-<y>307</y>
-<label>Zavolanie čísla</label>
-<tokens>0</tokens>
-<static>false</static>
-</place>
-<transition>
-<id>4</id>
-<x>234</x>
-<y>325</y>
-<label>Možnosti</label>
-</transition>
-<transition>
-<id>5</id>
-<x>726</x>
-<y>138</y>
-<label>Priehradka 1</label>
-</transition>
-<transition>
-<id>6</id>
-<x>729</x>
-<y>315</y>
-<label>Priehradka 2</label>
-</transition>
-<transition>
-<id>7</id>
-<x>729</x>
-<y>498</y>
-<label>Priehradka 3</label>
-</transition>
-<arc>
-<id>8</id>
-<type>regular</type>
-<sourceId>1</sourceId>
-<destinationId>4</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
-<arc>
-<id>9</id>
-<type>regular</type>
-<sourceId>4</sourceId>
-<destinationId>2</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
-<arc>
-<id>10</id>
-<type>regular</type>
-<sourceId>2</sourceId>
-<destinationId>5</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
-<arc>
-<id>11</id>
-<type>regular</type>
-<sourceId>2</sourceId>
-<destinationId>6</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
-<arc>
-<id>12</id>
-<type>regular</type>
-<sourceId>2</sourceId>
-<destinationId>7</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
-<arc>
-<id>13</id>
-<type>regular</type>
-<sourceId>7</sourceId>
-<destinationId>3</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
-<arc>
-<id>14</id>
-<type>regular</type>
-<sourceId>6</sourceId>
-<destinationId>3</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
-<arc>
-<id>15</id>
-<type>regular</type>
-<sourceId>5</sourceId>
-<destinationId>3</destinationId>
-<multiplicity>1</multiplicity>
-</arc>
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd">
+	<id>1</id>
+	<!-- TRANSACTIONS -->
+	<!-- ROLES -->
+	<!-- DATA -->
+	<!-- TRANSITIONS -->
+	<transition>
+		<id>4</id>
+		<x>234</x>
+		<y>325</y>
+		<label>Možnosti</label>
+	</transition>
+	<transition>
+		<id>5</id>
+		<x>726</x>
+		<y>138</y>
+		<label>Priehradka 1</label>
+	</transition>
+	<transition>
+		<id>6</id>
+		<x>729</x>
+		<y>315</y>
+		<label>Priehradka 2</label>
+	</transition>
+	<transition>
+		<id>7</id>
+		<x>729</x>
+		<y>498</y>
+		<label>Priehradka 3</label>
+	</transition>
+	<!-- PLACES -->
+	<place>
+		<id>1</id>
+		<x>67</x>
+		<y>325</y>
+		<label>Systém vyvolávania</label>
+		<tokens>1</tokens>
+		<static>false</static>
+	</place>
+	<place>
+		<id>2</id>
+		<x>419</x>
+		<y>323</y>
+		<label>Číslo</label>
+		<tokens>0</tokens>
+		<static>false</static>
+	</place>
+	<place>
+		<id>3</id>
+		<x>1070</x>
+		<y>307</y>
+		<label>Zavolanie čísla</label>
+		<tokens>0</tokens>
+		<static>false</static>
+	</place>
+	<!-- ARCS -->
+	<arc>
+		<id>8</id>
+		<type>regular</type>
+		<sourceId>1</sourceId>
+		<destinationId>4</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>9</id>
+		<type>regular</type>
+		<sourceId>4</sourceId>
+		<destinationId>2</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>10</id>
+		<type>regular</type>
+		<sourceId>2</sourceId>
+		<destinationId>5</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>11</id>
+		<type>regular</type>
+		<sourceId>2</sourceId>
+		<destinationId>6</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>12</id>
+		<type>regular</type>
+		<sourceId>2</sourceId>
+		<destinationId>7</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>13</id>
+		<type>regular</type>
+		<sourceId>7</sourceId>
+		<destinationId>3</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>14</id>
+		<type>regular</type>
+		<sourceId>6</sourceId>
+		<destinationId>3</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>15</id>
+		<type>regular</type>
+		<sourceId>5</sourceId>
+		<destinationId>3</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
 </document>
