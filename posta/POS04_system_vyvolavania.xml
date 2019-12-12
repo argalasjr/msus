@@ -3,6 +3,18 @@
 	<id>1</id>
 	<!-- TRANSACTIONS -->
 	<!-- ROLES -->
+	<role>
+		<id>admin</id>
+		<title>Admin</title>
+	</role>
+	<role>
+		<id>zakaznik</id>
+		<title>Zákazník</title>
+	</role>
+	<role>
+		<id>system</id>
+		<title>Systém</title>
+	</role>
 	<!-- DATA -->
 	<!-- TRANSITIONS -->
 	<transition>
@@ -10,24 +22,80 @@
 		<x>234</x>
 		<y>325</y>
 		<label>Možnosti</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>zakaznik</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>5</id>
 		<x>726</x>
 		<y>138</y>
 		<label>Priehradka 1</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>system</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>6</id>
 		<x>729</x>
 		<y>315</y>
 		<label>Priehradka 2</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>system</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>7</id>
 		<x>729</x>
 		<y>498</y>
 		<label>Priehradka 3</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>system</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
 	</transition>
 	<!-- PLACES -->
 	<place>

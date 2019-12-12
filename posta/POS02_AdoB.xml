@@ -3,6 +3,14 @@
 	<id>1</id>
 	<!-- TRANSACTIONS -->
 	<!-- ROLES -->
+	<role>
+	<id>admin</id>
+	<title>Admin</title>
+</role>
+	<role>
+		<id>kurier</id>
+		<title>Admin</title>
+	</role>
 	<!-- DATA -->
 	<!-- TRANSITIONS -->
 	<transition>
@@ -10,18 +18,60 @@
 		<x>202</x>
 		<y>430</y>
 		<label>Vyžiadanie zásielky</label>
+	<roleRef>
+		<id>admin</id>
+		<logic>
+			<perform>true</perform>
+			<cancel>true</cancel>
+		</logic>
+	</roleRef>
+		<roleRef>
+			<id>kurier</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>6</id>
 		<x>503</x>
 		<y>425</y>
 		<label>Rozdelenie do aut</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>kurier</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>7</id>
 		<x>823</x>
 		<y>423</y>
 		<label>Preson zásielky</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>kurier</id>
+			<logic>
+				<perform>true</perform>
+				<cancel>true</cancel>
+			</logic>
+		</roleRef>
 	</transition>
 	<!-- PLACES -->
 	<place>
