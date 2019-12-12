@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd">
-	<id>13</id>
+<!--	<id>13</id>-->
 	<!-- TRANSACTIONS -->
 	<!-- ROLES -->
 	<role>
@@ -9,11 +9,11 @@
 	</role>
 	<role>
 		<id>zamPost</id>
-		<name>Zamestnanec za prepážkou</name>
+		<name>Zamestnanec za prepazkou</name>
 	</role>
 	<role>
 		<id>custmer</id>
-		<name>Zákaznik</name>
+		<name>Zakaznik</name>
 	</role>
 	<!-- DATA -->
 	<!-- TRANSITIONS -->
@@ -22,6 +22,7 @@
 		<x>180</x>
 		<y>180</y>
 		<label>prijatie zasielky</label>
+		<assignPolicy>auto</assignPolicy>
 		<roleRef>
 			<id>admin</id>
 			<logic>
