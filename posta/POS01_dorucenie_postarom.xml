@@ -7,199 +7,199 @@
 	<!-- TRANSITIONS -->
 	<transition>
 		<id>14</id>
-		<x>1051</x>
-		<y>27</y>
-		<label>Áno</label>
+		<x>1060</x>
+		<y>20</y>
+		<label>Áno (s doporučením)</label>
 	</transition>
 	<transition>
 		<id>15</id>
-		<x>1051</x>
-		<y>158</y>
-		<label>Nie</label>
+		<x>1060</x>
+		<y>140</y>
+		<label>Nie (s doporučením)</label>
 	</transition>
 	<transition>
 		<id>23</id>
-		<x>730</x>
-		<y>535</y>
+		<x>740</x>
+		<y>540</y>
 		<label>Záasileka 1. a 2. triedy</label>
 	</transition>
 	<transition>
 		<id>27</id>
-		<x>1046</x>
-		<y>431</y>
-		<label>Áno</label>
+		<x>1060</x>
+		<y>420</y>
+		<label>Áno (1. 2. trieda)</label>
 	</transition>
 	<transition>
 		<id>28</id>
-		<x>1043</x>
-		<y>598</y>
-		<label>Nie</label>
+		<x>1060</x>
+		<y>580</y>
+		<label>Nie (1. 2. trieda)</label>
 	</transition>
 	<transition>
 		<id>31</id>
-		<x>627</x>
-		<y>295</y>
+		<x>620</x>
+		<y>300</y>
 		<label>Zásielka do vlastných rúk</label>
 	</transition>
 	<transition>
 		<id>33</id>
-		<x>1046</x>
-		<y>243</y>
-		<label>Áno</label>
+		<x>1060</x>
+		<y>260</y>
+		<label>Áno (do vlastných rúk)</label>
 	</transition>
 	<transition>
 		<id>34</id>
-		<x>1046</x>
-		<y>350</y>
-		<label>Nie</label>
+		<x>1060</x>
+		<y>340</y>
+		<label>Nie (do vlastných rúk)</label>
 	</transition>
 	<transition>
 		<id>37</id>
-		<x>1410</x>
-		<y>259</y>
-		<label>Áno</label>
+		<x>1420</x>
+		<y>260</y>
+		<label>Áno (overenie adresáta)</label>
 	</transition>
 	<transition>
 		<id>38</id>
-		<x>1414</x>
-		<y>363</y>
-		<label>Nie</label>
+		<x>1420</x>
+		<y>380</y>
+		<label>Nie (overenie aresáta)</label>
 	</transition>
 	<transition>
 		<id>42</id>
-		<x>677</x>
-		<y>731</y>
+		<x>660</x>
+		<y>740</y>
 		<label>Nadrozmerná zásielka</label>
 	</transition>
 	<transition>
 		<id>85</id>
-		<x>1675</x>
-		<y>359</y>
+		<x>1660</x>
+		<y>340</y>
 		<label>Poslaná na poštu</label>
 	</transition>
 	<transition>
 		<id>89</id>
-		<x>1593</x>
-		<y>77</y>
+		<x>1580</x>
+		<y>60</y>
 		<label>Prijatie</label>
 	</transition>
 	<transition>
 		<id>90</id>
-		<x>1618</x>
-		<y>205</y>
+		<x>1620</x>
+		<y>220</y>
 		<label>Odmietnutie</label>
 	</transition>
 	<transition>
 		<id>106</id>
-		<x>1539</x>
-		<y>587</y>
+		<x>1540</x>
+		<y>580</y>
 		<label>Chce reklamáciu</label>
 	</transition>
 	<transition>
 		<id>113</id>
-		<x>1606</x>
-		<y>451</y>
+		<x>1620</x>
+		<y>460</y>
 		<label>Zistenie závady</label>
 	</transition>
 	<transition>
 		<id>116</id>
-		<x>597</x>
-		<y>94</y>
+		<x>580</x>
+		<y>100</y>
 		<label>Zásielka s doporučením</label>
 	</transition>
 	<!-- PLACES -->
 	<place>
 		<id>5</id>
-		<x>361</x>
-		<y>463</y>
-		<label>Zasielka priradená postárovi</label>
+		<x>380</x>
+		<y>460</y>
+		<label>Zasielka priradená poštárovi</label>
 		<tokens>1</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>7</id>
-		<x>858</x>
-		<y>89</y>
+		<x>860</x>
+		<y>100</y>
 		<label>Zastihnutie spôsobilého adresáta</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>24</id>
-		<x>893</x>
-		<y>530</y>
+		<x>900</x>
+		<y>540</y>
 		<label>Overenie prítomnosti adresáta</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>32</id>
-		<x>850</x>
-		<y>294</y>
+		<x>860</x>
+		<y>300</y>
 		<label>Zastihnutie konkrétneho adresáta</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>36</id>
-		<x>1317</x>
-		<y>307</y>
+		<x>1300</x>
+		<y>300</y>
 		<label>Overenie adresáta</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>39</id>
-		<x>1529</x>
-		<y>259</y>
+		<x>1540</x>
+		<y>260</y>
 		<label>Predanie zásielky</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>40</id>
-		<x>1547</x>
-		<y>359</y>
+		<x>1540</x>
+		<y>340</y>
 		<label>Zasielka neprevzatá</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>43</id>
-		<x>863</x>
-		<y>730</y>
+		<x>860</x>
+		<y>740</y>
 		<label>Žltý papier s výzvou na poštu</label>
 		<tokens>1</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>86</id>
-		<x>1830</x>
-		<y>363</y>
+		<x>1820</x>
+		<y>380</y>
 		<label>Sklad na pošte</label>
 		<tokens>2</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>93</id>
-		<x>1833</x>
-		<y>227</y>
+		<x>1820</x>
+		<y>220</y>
 		<label>Adresát</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>103</id>
-		<x>1611</x>
-		<y>519</y>
+		<x>1653</x>
+		<y>539</y>
 		<label>Poškodená zásielka</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>108</id>
-		<x>1539</x>
-		<y>710</y>
+		<x>1540</x>
+		<y>700</y>
 		<label>Reklamacia</label>
 		<tokens>0</tokens>
 		<static>false</static>
@@ -330,7 +330,7 @@
 		<sourceId>34</sourceId>
 		<destinationId>43</destinationId>
 		<multiplicity>1</multiplicity>
-		<breakPoint><x>1394</x><y>687</y></breakPoint>
+		<breakPoint><x>1380</x><y>700</y></breakPoint>
 	</arc>
 	<arc>
 		<id>87</id>
@@ -387,7 +387,7 @@
 		<sourceId>15</sourceId>
 		<destinationId>43</destinationId>
 		<multiplicity>1</multiplicity>
-		<breakPoint><x>1514</x><y>790</y></breakPoint>
+		<breakPoint><x>1500</x><y>780</y></breakPoint>
 	</arc>
 	<arc>
 		<id>102</id>
