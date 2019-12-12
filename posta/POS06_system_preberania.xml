@@ -43,21 +43,21 @@
 	</transition>
 	<transition>
 		<id>10</id>
-		<x>340</x>
-		<y>300</y>
+		<x>366</x>
+		<y>290</y>
 		<label>nalepenie znamky</label>
 	</transition>
 	<transition>
 		<id>11</id>
-		<x>420</x>
-		<y>500</y>
-		<label>ma</label>
+		<x>346</x>
+		<y>534</y>
+		<label>ma znamku</label>
 	</transition>
 	<transition>
 		<id>12</id>
-		<x>300</x>
-		<y>420</y>
-		<label>nema</label>
+		<x>277</x>
+		<y>434</y>
+		<label>nema znamku</label>
 	</transition>
 	<transition>
 		<id>49</id>
@@ -103,8 +103,8 @@
 	</transition>
 	<transition>
 		<id>93</id>
-		<x>297</x>
-		<y>353</y>
+		<x>291</x>
+		<y>341</y>
 		<label>platba sekom</label>
 	</transition>
 	<transition>
@@ -158,8 +158,8 @@
 	</place>
 	<place>
 		<id>16</id>
-		<x>220</x>
-		<y>420</y>
+		<x>188</x>
+		<y>422</y>
 		<label>nezaplatena</label>
 		<tokens>0</tokens>
 		<static>false</static>
