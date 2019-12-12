@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd">
-<!--	<id>13</id>-->
 	<!-- TRANSACTIONS -->
 	<!-- ROLES -->
 	<role>
 		<id>admin</id>
-		<name>Admin</name>
+		<title>Admin</title>
 	</role>
 	<role>
 		<id>zamPost</id>
-		<name>Zamestnanec za prepazkou</name>
+		<title>Zamestnanec za prepazkou</title>
 	</role>
 	<role>
-		<id>custmer</id>
-		<name>Zakaznik</name>
+		<id>customer</id>
+		<title>Zakaznik</title>
 	</role>
 	<!-- DATA -->
 	<!-- TRANSITIONS -->
