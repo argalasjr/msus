@@ -15,8 +15,32 @@
 		<id>zamestanec</id>
 		<title>Zamestanec</title>
 	</role>
-
 	<!-- DATA -->
+	<data type="text">
+		<id>name_adresat</id>
+		<init>Jozko</init>
+		<title>Meno príjmateľa</title>
+	</data>
+	<data type="text">
+		<id>surname_adresat</id>
+		<init>Mrkvicka</init>
+		<title>Priezvisko príjmateľa</title>
+	</data>
+	<data type="text">
+		<id>obciansky</id>
+		<init>EX111111</init>
+		<title>Občianský preukaz</title>
+	</data>
+	<data type="text">
+		<id>predana</id>
+		<init>Zásielka predaná</init>
+		<title>Zásielka</title>
+	</data>
+	<data type="text">
+		<id>skontrolovana</id>
+		<init>Zásielka skontrolovaná</init>
+		<title>Zásielka</title>
+	</data>
 	<!-- TRANSITIONS -->
 	<transition>
 		<id>2</id>
@@ -35,6 +59,27 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>name_adresat</id>
+			<logic>
+				<behavior>visible</behavior>
+				<behavior>editable</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>surname_adresat</id>
+			<logic>
+				<behavior>visible</behavior>
+				<behavior>editable</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>obciansky</id>
+			<logic>
+				<behavior>visible</behavior>
+				<behavior>editable</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>3</id>
@@ -53,6 +98,13 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>predana</id>
+			<logic>
+				<behavior>visible</behavior>
+				<behavior>editable</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>5</id>
@@ -71,6 +123,13 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>skontrolovana</id>
+			<logic>
+				<behavior>visible</behavior>
+				<behavior>editable</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<!-- PLACES -->
 	<place>

@@ -13,6 +13,36 @@
 		<title>Zamestnanec</title>
 	</role>
 	<!-- DATA -->
+	<data type="multichoice">
+		<id>potvrdenie</id>
+		<title>Potvrdenie zásielok</title>
+		<values>Zasielka 01</values>
+		<values>Zasielka 02</values>
+		<values>Zasielka 03</values>
+		<values>Zasielka 04</values>
+		<values>Zasielka 05</values>
+		<view>
+			<list>5</list>
+		</view>
+	</data>
+	<data type="multichoice">
+		<id>overenie</id>
+		<title>Overenie zásielok</title>
+		<desc>Na dokončenie je potrebné spľniť každý bod</desc>
+		<values>Overenie Zasielka 01</values>
+		<values>Overenie Zasielka 02</values>
+		<values>Overenie Zasielka 03</values>
+		<values>Overenie Zasielka 04</values>
+		<values>Overenie Zasielka 05</values>
+		<view>
+			<list>5</list>
+		</view>
+	</data>
+	<data type="text">
+		<id>presuvanie</id>
+		<init>Zásielka sa presúva</init>
+		<title>Presun</title>
+	</data>
 	<!-- TRANSITIONS -->
 	<transition>
 		<id>5</id>
@@ -31,6 +61,13 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>potvrdenie</id>
+			<logic>
+				<behavior>visible</behavior>
+				<behavior>editable</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>6</id>
@@ -49,6 +86,13 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>presuvanie</id>
+			<logic>
+				<behavior>visible</behavior>
+				<behavior>editable</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>7</id>
@@ -67,6 +111,13 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>overenie</id>
+			<logic>
+				<behavior>visible</behavior>
+				<behavior>editable</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<!-- PLACES -->
 	<place>
