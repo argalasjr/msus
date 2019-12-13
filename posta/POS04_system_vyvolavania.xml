@@ -17,12 +17,35 @@
 		<title>Systém</title>
 	</role>
 	<!-- DATA -->
+	<data type="enumeration">
+		<id>moznosti</id>
+		<title>Vyber moznosti</title>
+		<values>Poslanie Zásielky</values>
+		<values>Prevzatie Zásielky</values>
+		<values>Podanie reklamácie</values>
+		<view>
+			<list>3</list>
+		</view>
+	</data>
+
+	<data type="number">
+		<id>cislo</id>
+		<init>1</init>
+		<title>Číslo zákazníka</title>
+	</data>
 	<!-- TRANSITIONS -->
 	<transition>
 		<id>4</id>
 		<x>220</x>
 		<y>340</y>
 		<label>vyber moznosti</label>
+		<dataRef>
+			<id>moznosti</id>
+			<logic>
+				<behavior>editable</behavior>
+				<behavior>required</behavior>
+			</logic>
+		</dataRef>
 		<roleRef>
 			<id>admin</id>
 			<logic>
@@ -53,6 +76,12 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>cislo</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>17</id>
@@ -71,6 +100,12 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>cislo</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<!-- PLACES -->
 	<place>
