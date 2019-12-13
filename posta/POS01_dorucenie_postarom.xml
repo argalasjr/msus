@@ -21,6 +21,25 @@
         <title>Poštár</title>
     </role>
 	<!-- DATA -->
+    <data type="text">
+        <id>name_adresat</id>
+        <values>Jozko</values>
+        <title>Meno Adresata</title>
+    </data>
+    <data type="text">
+        <id>surname_adresat</id>
+        <values>Mrkvicka</values>
+        <title>Priezvisko Adresata</title>
+    </data>
+
+    <data type="text">
+        <id>name_check</id>
+        <title>Meno</title>
+    </data>
+    <data type="text">
+        <id>surname_check</id>
+        <title>Priezvisko</title>
+    </data>
 	<!-- TRANSITIONS -->
 	<transition>
 		<id>14</id>
@@ -39,6 +58,30 @@
                 <perform>true</perform>
             </logic>
         </roleRef>
+        <dataRef>
+            <id>name_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>name_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
 	</transition>
 	<transition>
 		<id>15</id>
@@ -51,6 +94,30 @@
                 <perform>true</perform>
             </logic>
         </roleRef>
+        <dataRef>
+            <id>name_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>name_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
         <roleRef>
             <id>postar</id>
             <logic>
@@ -93,6 +160,30 @@
                 <perform>true</perform>
             </logic>
         </roleRef>
+        <dataRef>
+            <id>name_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>name_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
 	</transition>
 	<transition>
 		<id>28</id>
@@ -111,6 +202,30 @@
                 <perform>true</perform>
             </logic>
         </roleRef>
+        <dataRef>
+            <id>name_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>name_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
 	</transition>
 	<transition>
 		<id>31</id>
@@ -147,6 +262,30 @@
                 <perform>true</perform>
             </logic>
         </roleRef>
+        <dataRef>
+            <id>name_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>name_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
 	</transition>
 	<transition>
 		<id>34</id>
@@ -165,6 +304,30 @@
                 <perform>true</perform>
             </logic>
         </roleRef>
+        <dataRef>
+            <id>name_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>name_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_check</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
 	</transition>
 	<transition>
 		<id>37</id>
@@ -183,6 +346,32 @@
                 <perform>true</perform>
             </logic>
         </roleRef>
+        <dataRef>
+            <id>name_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>name_check</id>
+            <logic>
+                <behavior>editable</behavior>
+                <behavior>required</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname_check</id>
+            <logic>
+                <behavior>editable</behavior>
+                <behavior>required</behavior>
+            </logic>
+        </dataRef>
 	</transition>
 	<transition>
 		<id>38</id>

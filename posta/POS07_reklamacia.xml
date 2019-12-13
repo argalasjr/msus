@@ -1,70 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd">
+	<id>5</id>
 	<!-- TRANSACTIONS -->
 	<!-- ROLES -->
+	<role>
+		<id>admin</id>
+		<title>Admin</title>
+	</role>
+	<role>
+		<id>zamestnanec</id>
+		<title>Zamestnanec</title>
+	</role>
 	<!-- DATA -->
 	<!-- TRANSITIONS -->
 	<transition>
 		<id>5</id>
-		<x>207</x>
-		<y>125</y>
+		<x>220</x>
+		<y>140</y>
 		<label>Vyplnenie reklamácie</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>zamestnanec</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>7</id>
-		<x>466</x>
-		<y>130</y>
-		<label>Kontrola reklamácie</label>
+		<x>460</x>
+		<y>140</y>
+		<label>zaevidovanie do systemu</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>zamestnanec</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>9</id>
-		<x>747</x>
-		<y>129</y>
-		<label>Zanesenie reklamácie do systému</label>
-	</transition>
-	<transition>
-		<id>17</id>
-		<x>914</x>
-		<y>252</y>
-		<label>Vyhodnotenie reklamácie</label>
+		<x>740</x>
+		<y>140</y>
+		<label>vyhodnotenie reklamacie</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>zamestnanec</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<!-- PLACES -->
 	<place>
 		<id>1</id>
-		<x>67</x>
-		<y>127</y>
+		<x>60</x>
+		<y>140</y>
 		<label></label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>6</id>
-		<x>339</x>
-		<y>126</y>
+		<x>340</x>
+		<y>140</y>
 		<label></label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>8</id>
-		<x>599</x>
-		<y>130</y>
+		<x>580</x>
+		<y>140</y>
 		<label></label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>10</id>
-		<x>915</x>
-		<y>125</y>
-		<label></label>
-		<tokens>0</tokens>
-		<static>false</static>
-	</place>
-	<place>
-		<id>18</id>
-		<x>914</x>
-		<y>368</y>
+		<x>900</x>
+		<y>140</y>
 		<label></label>
 		<tokens>0</tokens>
 		<static>false</static>
@@ -110,20 +141,6 @@
 		<type>regular</type>
 		<sourceId>9</sourceId>
 		<destinationId>10</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
-		<id>19</id>
-		<type>regular</type>
-		<sourceId>10</sourceId>
-		<destinationId>17</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
-		<id>20</id>
-		<type>regular</type>
-		<sourceId>17</sourceId>
-		<destinationId>18</destinationId>
 		<multiplicity>1</multiplicity>
 	</arc>
 </document>

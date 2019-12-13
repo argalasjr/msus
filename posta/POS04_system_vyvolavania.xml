@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd">
 	<id>1</id>
+	<title>Admin</title>
 	<!-- TRANSACTIONS -->
 	<!-- ROLES -->
 	<role>
@@ -19,106 +20,88 @@
 	<!-- TRANSITIONS -->
 	<transition>
 		<id>4</id>
-		<x>234</x>
-		<y>325</y>
-		<label>Možnosti</label>
+		<x>220</x>
+		<y>340</y>
+		<label>vyber moznosti</label>
 		<roleRef>
 			<id>admin</id>
 			<logic>
 				<perform>true</perform>
-				<cancel>true</cancel>
 			</logic>
 		</roleRef>
 		<roleRef>
 			<id>zakaznik</id>
 			<logic>
 				<perform>true</perform>
-				<cancel>true</cancel>
-			</logic>
-		</roleRef>
-	</transition>
-	<transition>
-		<id>5</id>
-		<x>726</x>
-		<y>138</y>
-		<label>Priehradka 1</label>
-		<roleRef>
-			<id>admin</id>
-			<logic>
-				<perform>true</perform>
-				<cancel>true</cancel>
-			</logic>
-		</roleRef>
-		<roleRef>
-			<id>system</id>
-			<logic>
-				<perform>true</perform>
-				<cancel>true</cancel>
 			</logic>
 		</roleRef>
 	</transition>
 	<transition>
 		<id>6</id>
-		<x>729</x>
-		<y>315</y>
-		<label>Priehradka 2</label>
+		<x>540</x>
+		<y>340</y>
+		<label>pridelenie cisla</label>
 		<roleRef>
 			<id>admin</id>
 			<logic>
 				<perform>true</perform>
-				<cancel>true</cancel>
 			</logic>
 		</roleRef>
 		<roleRef>
 			<id>system</id>
 			<logic>
 				<perform>true</perform>
-				<cancel>true</cancel>
 			</logic>
 		</roleRef>
 	</transition>
 	<transition>
-		<id>7</id>
-		<x>729</x>
-		<y>498</y>
-		<label>Priehradka 3</label>
+		<id>17</id>
+		<x>860</x>
+		<y>340</y>
+		<label>vyvolanie cisla</label>
 		<roleRef>
 			<id>admin</id>
 			<logic>
 				<perform>true</perform>
-				<cancel>true</cancel>
 			</logic>
 		</roleRef>
 		<roleRef>
 			<id>system</id>
 			<logic>
 				<perform>true</perform>
-				<cancel>true</cancel>
 			</logic>
 		</roleRef>
 	</transition>
 	<!-- PLACES -->
 	<place>
 		<id>1</id>
-		<x>67</x>
-		<y>325</y>
+		<x>60</x>
+		<y>340</y>
 		<label>Systém vyvolávania</label>
 		<tokens>1</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>2</id>
-		<x>419</x>
-		<y>323</y>
-		<label>Číslo</label>
+		<x>380</x>
+		<y>340</y>
+		<label></label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
 	<place>
 		<id>3</id>
-		<x>1070</x>
-		<y>307</y>
-		<label>Zavolanie čísla</label>
+		<x>660</x>
+		<y>340</y>
+		<label></label>
+		<tokens>0</tokens>
+		<static>false</static>
+	</place>
+	<place>
+		<id>16</id>
+		<x>1100</x>
+		<y>340</y>
+		<label>priehradka</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
@@ -138,31 +121,10 @@
 		<multiplicity>1</multiplicity>
 	</arc>
 	<arc>
-		<id>10</id>
-		<type>regular</type>
-		<sourceId>2</sourceId>
-		<destinationId>5</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
 		<id>11</id>
 		<type>regular</type>
 		<sourceId>2</sourceId>
 		<destinationId>6</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
-		<id>12</id>
-		<type>regular</type>
-		<sourceId>2</sourceId>
-		<destinationId>7</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
-		<id>13</id>
-		<type>regular</type>
-		<sourceId>7</sourceId>
-		<destinationId>3</destinationId>
 		<multiplicity>1</multiplicity>
 	</arc>
 	<arc>
@@ -173,10 +135,17 @@
 		<multiplicity>1</multiplicity>
 	</arc>
 	<arc>
-		<id>15</id>
+		<id>18</id>
 		<type>regular</type>
-		<sourceId>5</sourceId>
-		<destinationId>3</destinationId>
+		<sourceId>3</sourceId>
+		<destinationId>17</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>19</id>
+		<type>regular</type>
+		<sourceId>17</sourceId>
+		<destinationId>16</destinationId>
 		<multiplicity>1</multiplicity>
 	</arc>
 </document>
