@@ -8,37 +8,63 @@
 		<id>admin</id>
 		<title>Admin</title>
 	</role>
-    <role>
-        <id>posta</id>
-        <title>Pošta</title>
-    </role>
-    <role>
-        <id>adresat</id>
-        <title>Adresát</title>
-    </role>
-    <role>
-        <id>postar</id>
-        <title>Poštár</title>
-    </role>
+	<role>
+		<id>posta</id>
+		<title>Pošta</title>
+	</role>
+	<role>
+		<id>adresat</id>
+		<title>Adresát</title>
+	</role>
+	<role>
+		<id>postar</id>
+		<title>Poštár</title>
+	</role>
 	<!-- DATA -->
+	<data type="text">
+		<id>name_adresat</id>
+		<title>Meno Adresáta</title>
+		<init>Jozko</init>
+	</data>
+	<data type="text">
+		<id>surname_adresat</id>
+		<title>Priezvisko Adresáta</title>
+		<init>Mrkvicka</init>
+	</data>
+	<data type="text">
+		<id>name</id>
+		<title>Meno osoby</title>
+        <init></init>
+	</data>
+	<data type="text">
+		<id>surname</id>
+		<title>Priezvisko Osoby</title>
+        <init></init>
+	</data>
+	<data type="text">
+		<id>adresa_adresat</id>
+		<title>Adresa</title>
+		<init>Zemianske kostolany 4, 91122, Partizánske</init>
+	</data>
+	<data type="text">
+		<id>obciansky</id>
+		<title>Občianský preukaz</title>
+		<init>EX111111</init>
+	</data>
+	<data type="text">
+		<id>adresa</id>
+		<title>Adresa osoby na občianskom preukaze</title>
+		<init>Zemianske kostolany 4, 91122, Partizánske</init>
+	</data>
     <data type="text">
-        <id>name_adresat</id>
-        <values>Jozko</values>
-        <title>Meno Adresata</title>
-    </data>
-    <data type="text">
-        <id>surname_adresat</id>
-        <values>Mrkvicka</values>
-        <title>Priezvisko Adresata</title>
+        <id>nadr</id>
+        <title>Informácia</title>
+        <init>Výzva na prevzatie na pošte</init>
     </data>
 
-    <data type="text">
-        <id>name_check</id>
-        <title>Meno</title>
-    </data>
-    <data type="text">
-        <id>surname_check</id>
-        <title>Priezvisko</title>
+    <data type="boolean">
+        <id>overenie</id>
+        <title>Overenie</title>
     </data>
 	<!-- TRANSITIONS -->
 	<transition>
@@ -46,120 +72,67 @@
 		<x>1060</x>
 		<y>20</y>
 		<label>Spôsobilý adresát zastihnutý</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
         <dataRef>
-            <id>name_adresat</id>
+            <id>adresa_adresat</id>
             <logic>
                 <behavior>visible</behavior>
             </logic>
         </dataRef>
-        <dataRef>
-            <id>surname_adresat</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>name_check</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>surname_check</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
+		<dataRef>
+			<id>adresa</id>
+			<logic>
+				<behavior>editable</behavior>
+                <behavior>required</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>15</id>
 		<x>1060</x>
 		<y>140</y>
 		<label>Spôsobilý adresát nezastihnutý</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <dataRef>
-            <id>name_adresat</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>surname_adresat</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>name_check</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>surname_check</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>23</id>
 		<x>740</x>
 		<y>540</y>
-		<label>Záasileka 1. a 2. triedy</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-	</transition>
-	<transition>
-		<id>27</id>
-		<x>1060</x>
-		<y>420</y>
-		<label>Adresát zastihnutý</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<label>Zásielka 1. a 2. triedy</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
         <dataRef>
             <id>name_adresat</id>
             <logic>
@@ -173,55 +146,7 @@
             </logic>
         </dataRef>
         <dataRef>
-            <id>name_check</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>surname_check</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-	</transition>
-	<transition>
-		<id>28</id>
-		<x>1060</x>
-		<y>580</y>
-		<label>Adresát nezastihnutý</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <dataRef>
-            <id>name_adresat</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>surname_adresat</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>name_check</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>surname_check</id>
+            <id>adresa_adresat</id>
             <logic>
                 <behavior>visible</behavior>
             </logic>
@@ -232,36 +157,18 @@
 		<x>620</x>
 		<y>300</y>
 		<label>Zásielka do vlastných rúk</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-	</transition>
-	<transition>
-		<id>33</id>
-		<x>1060</x>
-		<y>260</y>
-		<label>Konkrétny adresát zastihnutý</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
         <dataRef>
             <id>name_adresat</id>
             <logic>
@@ -275,15 +182,66 @@
             </logic>
         </dataRef>
         <dataRef>
-            <id>name_check</id>
+            <id>adresa_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+	</transition>
+	<transition>
+		<id>33</id>
+		<x>1060</x>
+		<y>260</y>
+		<label>Konkrétny adresát zastihnutý</label>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<dataRef>
+			<id>name_adresat</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>surname_adresat</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
+        <dataRef>
+            <id>adresa_adresat</id>
             <logic>
                 <behavior>visible</behavior>
             </logic>
         </dataRef>
         <dataRef>
-            <id>surname_check</id>
+            <id>name</id>
             <logic>
-                <behavior>visible</behavior>
+                <behavior>editable</behavior>
+                <behavior>required</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname</id>
+            <logic>
+                <behavior>editable</behavior>
+                <behavior>required</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>adresa</id>
+            <logic>
+                <behavior>editable</behavior>
+                <behavior>required</behavior>
             </logic>
         </dataRef>
 	</transition>
@@ -292,60 +250,36 @@
 		<x>1060</x>
 		<y>340</y>
 		<label>Konkrétny adresát nezastihnutý</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <dataRef>
-            <id>name_adresat</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>surname_adresat</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>name_check</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
-        <dataRef>
-            <id>surname_check</id>
-            <logic>
-                <behavior>visible</behavior>
-            </logic>
-        </dataRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>37</id>
 		<x>1460</x>
 		<y>306</y>
 		<label>Správne overenie adresáta</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
         <dataRef>
             <id>name_adresat</id>
             <logic>
@@ -359,14 +293,31 @@
             </logic>
         </dataRef>
         <dataRef>
-            <id>name_check</id>
+            <id>adresa_adresat</id>
             <logic>
-                <behavior>editable</behavior>
-                <behavior>required</behavior>
+                <behavior>visible</behavior>
             </logic>
         </dataRef>
         <dataRef>
-            <id>surname_check</id>
+            <id>name</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>adresa</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>overenie</id>
             <logic>
                 <behavior>editable</behavior>
                 <behavior>required</behavior>
@@ -378,162 +329,229 @@
 		<x>1366</x>
 		<y>401</y>
 		<label>Nesprávne overenie adresáta</label>
-        <roleRef>
-            <id>admin</id>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+        <dataRef>
+            <id>name_adresat</id>
             <logic>
-                <perform>true</perform>
+                <behavior>visible</behavior>
             </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
+        </dataRef>
+        <dataRef>
+            <id>surname_adresat</id>
             <logic>
-                <perform>true</perform>
+                <behavior>visible</behavior>
             </logic>
-        </roleRef>
+        </dataRef>
+        <dataRef>
+            <id>adresa_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>name</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>surname</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>adresa</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
+        <dataRef>
+            <id>overenie</id>
+            <logic>
+                <behavior>editable</behavior>
+                <behavior>required</behavior>
+            </logic>
+        </dataRef>
 	</transition>
 	<transition>
 		<id>42</id>
 		<x>660</x>
 		<y>740</y>
 		<label>Nadrozmerná zásielka</label>
-        <roleRef>
-            <id>admin</id>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+        <dataRef>
+            <id>nadr</id>
             <logic>
-                <perform>true</perform>
+                <behavior>visible</behavior>
             </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+        </dataRef>
 	</transition>
 	<transition>
 		<id>85</id>
 		<x>1675</x>
 		<y>374</y>
 		<label>Poslaná na poštu</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>89</id>
 		<x>1580</x>
 		<y>60</y>
 		<label>Prijatá zásielka</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>adresat</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>adresat</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>90</id>
 		<x>1629</x>
 		<y>247</y>
 		<label>Odmietnutá zásielka</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>adresat</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>adresat</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>106</id>
 		<x>1540</x>
 		<y>580</y>
 		<label>Chce reklamáciu</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>adresat</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>adresat</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>113</id>
 		<x>1620</x>
 		<y>460</y>
 		<label>Zistenie závady</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>adresat</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>adresat</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<transition>
 		<id>116</id>
 		<x>580</x>
 		<y>100</y>
 		<label>Zásielka s doporučením</label>
-        <roleRef>
-            <id>admin</id>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>postar</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+        <dataRef>
+            <id>name_adresat</id>
             <logic>
-                <perform>true</perform>
+                <behavior>visible</behavior>
             </logic>
-        </roleRef>
-        <roleRef>
-            <id>postar</id>
+        </dataRef>
+        <dataRef>
+            <id>surname_adresat</id>
             <logic>
-                <perform>true</perform>
+                <behavior>visible</behavior>
             </logic>
-        </roleRef>
+        </dataRef>
+        <dataRef>
+            <id>adresa_adresat</id>
+            <logic>
+                <behavior>visible</behavior>
+            </logic>
+        </dataRef>
 	</transition>
 	<transition>
 		<id>151</id>
 		<x>1930</x>
 		<y>367</y>
 		<label>Poslaná odosielateľovi</label>
-        <roleRef>
-            <id>admin</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
-        <roleRef>
-            <id>posta</id>
-            <logic>
-                <perform>true</perform>
-            </logic>
-        </roleRef>
+		<roleRef>
+			<id>admin</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
+		<roleRef>
+			<id>posta</id>
+			<logic>
+				<perform>true</perform>
+			</logic>
+		</roleRef>
 	</transition>
 	<!-- PLACES -->
 	<place>
@@ -556,7 +574,7 @@
 		<id>24</id>
 		<x>900</x>
 		<y>540</y>
-		<label>Overenie prítomnosti adresáta</label>
+		<label>schranka</label>
 		<tokens>0</tokens>
 		<static>false</static>
 	</place>
@@ -667,20 +685,6 @@
 		<type>regular</type>
 		<sourceId>23</sourceId>
 		<destinationId>24</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
-		<id>51</id>
-		<type>regular</type>
-		<sourceId>24</sourceId>
-		<destinationId>27</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
-		<id>52</id>
-		<type>regular</type>
-		<sourceId>24</sourceId>
-		<destinationId>28</destinationId>
 		<multiplicity>1</multiplicity>
 	</arc>
 	<arc>
@@ -811,13 +815,6 @@
 		<multiplicity>1</multiplicity>
 	</arc>
 	<arc>
-		<id>100</id>
-		<type>regular</type>
-		<sourceId>27</sourceId>
-		<destinationId>36</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
 		<id>101</id>
 		<type>regular</type>
 		<sourceId>15</sourceId>
@@ -886,13 +883,6 @@
 		<type>regular</type>
 		<sourceId>151</sourceId>
 		<destinationId>152</destinationId>
-		<multiplicity>1</multiplicity>
-	</arc>
-	<arc>
-		<id>189</id>
-		<type>regular</type>
-		<sourceId>28</sourceId>
-		<destinationId>43</destinationId>
 		<multiplicity>1</multiplicity>
 	</arc>
 </document>
