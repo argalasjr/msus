@@ -1,11 +1,11 @@
-	<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://modeler.netgrif.com/petriflow_schema.xsd">
 	<id>admin</id>
 	<!-- TRANSACTIONS -->
 	<!-- ROLES -->
 	<role>
 		<id>admin</id>
-		<title></title>
+		<title>Admin</title>
 	</role>
 	<role>
 		<id>zamestnanec</id>
@@ -16,6 +16,65 @@
 		<title>Zákazník</title>
 	</role>
 	<!-- DATA -->
+	<data type="text">
+		<id>name_adresat</id>
+		<init>Jozko</init>
+		<title>Meno príjmateľa</title>
+	</data>
+	<data type="text">
+		<id>surname_adresat</id>
+		<init>Mrkvicka</init>
+		<title>Priezvisko príjmateľa</title>
+	</data>
+	<data type="text">
+		<id>name_odosielatel</id>
+		<init>Jozko</init>
+		<title>Meno odosielateľa</title>
+	</data>
+	<data type="text">
+		<id>surname_odosielatel</id>
+		<init>Mrkvicka</init>
+		<title>Priezvisko odosielateľa</title>
+	</data>
+
+	<data type="text">
+		<id>adresa_odosielatel</id>
+		<init>Horná Dolná 57, 84052, Vranov nad Topľov</init>
+		<title>Adresa</title>
+	</data>
+	<data type="text">
+		<id>adresa_adresat</id>
+		<init>Zemianske kostolany 4, 91122, Partizánske</init>
+		<title>Adresa</title>
+	</data>
+	<data type="text">
+		<id>prevzata</id>
+		<init>Zásielka prevzatá poštou</init>
+		<title>Zásielka</title>
+	</data>
+	<data type="text">
+		<id>skontrolovana</id>
+		<init>Zásielka skontrolovaná</init>
+		<title>Zásielka</title>
+	</data>
+	<data type="enumeration">
+		<id>platby</id>
+		<title>Typ platby:</title>
+		<values>Karta</values>
+		<values>Hotovosť</values>
+		<view>
+			<list>2</list>
+		</view>
+	</data>
+
+	<data type="boolean">
+		<id>doporuceny</id>
+		<title>Doporučený list</title>
+	</data>
+	<data type="boolean">
+		<id>znamka</id>
+		<title>Má známku</title>
+	</data>
 	<!-- TRANSITIONS -->
 	<transition>
 		<id>2</id>
@@ -53,6 +112,42 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>name_adresat</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>surname_adresat</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>adresa_adresat</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>name_odosielatel</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>surname_odosielatel</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>adresa_odosielatel</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>11</id>
@@ -71,6 +166,14 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>platby</id>
+			<logic>
+				<behavior>editable</behavior>
+				<behavior>required</behavior>
+			</logic>
+		</dataRef>
+
 	</transition>
 	<transition>
 		<id>61</id>
@@ -89,6 +192,13 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>doporuceny</id>
+			<logic>
+				<behavior>editable</behavior>
+				<behavior>required</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>69</id>
@@ -107,6 +217,13 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>znamka</id>
+			<logic>
+				<behavior>editable</behavior>
+				<behavior>required</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>90</id>
@@ -125,6 +242,12 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>prevzata</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<!-- PLACES -->
 	<place>
