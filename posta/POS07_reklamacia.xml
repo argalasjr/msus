@@ -133,6 +133,14 @@
                 <behavior>required</behavior>
             </logic>
 		</dataRef>
+		<event type="finish">
+			<id>reclamation_listed_action</id>
+			<actions phase="pre">
+				<action>
+					checked: f.reclamation_listed; assert checked.value; 
+				</action>
+			</actions>
+		</event>
 	</transition>
 	<transition>
 		<id>9</id>
@@ -182,6 +190,14 @@
                 <behavior>required</behavior>
             </logic>
 		</dataRef>
+		<event type="finish">
+			<id>reclamation_approved_action</id>
+			<actions phase="pre">
+				<action>
+					checked: f.reclamation_approved; assert checked.value; 
+				</action>
+			</actions>
+		</event>
 	</transition>
 	<!-- PLACES -->
 	<place>
