@@ -199,6 +199,14 @@
 				<behavior>required</behavior>
 			</logic>
 		</dataRef>
+		<event type="finish">
+			<id>dopuruceny_action</id>
+			<actions phase="pre">
+				<action>
+					checked: f.dopuruceny; assert checked.value;
+				</action>
+			</actions>
+		</event>
 	</transition>
 	<transition>
 		<id>69</id>
@@ -224,6 +232,14 @@
 				<behavior>required</behavior>
 			</logic>
 		</dataRef>
+		<event type="finish">
+			<id>znamka_action</id>
+			<actions phase="pre">
+				<action>
+					checked: f.znamka; assert checked.value;
+				</action>
+			</actions>
+		</event>
 	</transition>
 	<transition>
 		<id>90</id>
