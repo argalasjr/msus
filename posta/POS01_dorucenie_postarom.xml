@@ -66,6 +66,12 @@
         <id>overenie</id>
         <title>Overenie</title>
     </data>
+
+	<data type="boolean">
+		<id>kontrola</id>
+		<title>Kontrola</title>
+		<init></init>
+	</data>
 	<!-- TRANSITIONS -->
 	<transition>
 		<id>14</id>
@@ -90,6 +96,20 @@
                 <behavior>visible</behavior>
             </logic>
         </dataRef>
+		<dataRef>
+			<id>name</id>
+			<logic>
+				<behavior>editable</behavior>
+				<behavior>required</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>surname</id>
+			<logic>
+				<behavior>editable</behavior>
+				<behavior>required</behavior>
+			</logic>
+		</dataRef>
 		<dataRef>
 			<id>adresa</id>
 			<logic>
@@ -151,6 +171,18 @@
                 <behavior>visible</behavior>
             </logic>
         </dataRef>
+		<dataRef>
+			<id>name</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>surname</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>31</id>
@@ -262,12 +294,24 @@
 				<perform>true</perform>
 			</logic>
 		</roleRef>
+		<dataRef>
+			<id>name</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
+		<dataRef>
+			<id>surname</id>
+			<logic>
+				<behavior>visible</behavior>
+			</logic>
+		</dataRef>
 	</transition>
 	<transition>
 		<id>37</id>
 		<x>1460</x>
 		<y>306</y>
-		<label>Správne overenie adresáta</label>
+		<label>Adresát vyhovuje</label>
 		<roleRef>
 			<id>admin</id>
 			<logic>
@@ -301,7 +345,7 @@
         <dataRef>
             <id>name</id>
             <logic>
-                <behavior>visible</behavior>
+				<behavior>visible</behavior>
             </logic>
         </dataRef>
         <dataRef>
@@ -316,19 +360,27 @@
                 <behavior>visible</behavior>
             </logic>
         </dataRef>
-        <dataRef>
-            <id>overenie</id>
-            <logic>
-                <behavior>editable</behavior>
-                <behavior>required</behavior>
-            </logic>
-        </dataRef>
+		<dataRef>
+			<id>kontrola</id>
+			<logic>
+				<behavior>editable</behavior>
+				<behavior>required</behavior>
+			</logic>
+		</dataRef>
+		<event type="finish">
+			<id>kontrola</id>
+			<actions phase="pre">
+				<action>
+					checked: f.kontrola; assert checked.value;
+				</action>
+			</actions>
+		</event>
 	</transition>
 	<transition>
 		<id>38</id>
 		<x>1366</x>
 		<y>401</y>
-		<label>Nesprávne overenie adresáta</label>
+		<label>Adresát nevyhovuje</label>
 		<roleRef>
 			<id>admin</id>
 			<logic>
@@ -377,13 +429,21 @@
                 <behavior>visible</behavior>
             </logic>
         </dataRef>
-        <dataRef>
-            <id>overenie</id>
-            <logic>
-                <behavior>editable</behavior>
-                <behavior>required</behavior>
-            </logic>
-        </dataRef>
+		<dataRef>
+			<id>kontrola</id>
+			<logic>
+				<behavior>editable</behavior>
+				<behavior>required</behavior>
+			</logic>
+		</dataRef>
+		<event type="finish">
+			<id>kontrola</id>
+			<actions phase="pre">
+				<action>
+					checked: f.kontrola; assert checked.value;
+				</action>
+			</actions>
+		</event>
 	</transition>
 	<transition>
 		<id>42</id>
