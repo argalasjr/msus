@@ -190,14 +190,6 @@
                 <behavior>required</behavior>
             </logic>
 		</dataRef>
-		<event type="finish">
-			<id>reclamation_approved_action</id>
-			<actions phase="pre">
-				<action>
-					checked: f.reclamation_approved; assert checked.value; 
-				</action>
-			</actions>
-		</event>
 	</transition>
 	<!-- PLACES -->
 	<place>
