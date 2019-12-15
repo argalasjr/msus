@@ -200,10 +200,10 @@
 			</logic>
 		</dataRef>
 		<event type="finish">
-			<id>dopuruceny_action</id>
+			<id>doporuceny_action</id>
 			<actions phase="pre">
 				<action>
-					checked: f.dopuruceny; assert checked.value;
+					checked: f.doporuceny; assert checked.value;
 				</action>
 			</actions>
 		</event>
