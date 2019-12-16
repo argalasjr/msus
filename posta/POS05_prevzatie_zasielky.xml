@@ -36,10 +36,13 @@
 		<title>Zásielka</title>
 		<init>Zásielka predaná</init>
 	</data>
-	<data type="text">
+	<data type="boolean">
+		<id>skontrolovana_id</id>
+		<title>Kontrola identity</title>
+	</data>
+	<data type="boolean">
 		<id>skontrolovana</id>
-		<title>Zásielka</title>
-		<init>Zásielka skontrolovaná</init>
+		<title>Kontrola zásielky</title>
 	</data>
 	<!-- TRANSITIONS -->
 	<transition>
@@ -80,6 +83,21 @@
 				<behavior>editable</behavior>
 			</logic>
 		</dataRef>
+		<dataRef>
+			<id>skontrolovana_id</id>
+			<logic>
+				<behavior>visible</behavior>
+				<behavior>editable</behavior>
+			</logic>
+		</dataRef>
+		<event type="finish">
+			<id>skontrolovana_id_action</id>
+			<actions phase="pre">
+				<action>
+					checked: f.skontrolovana_id; assert checked.value; 
+				</action>
+			</actions>
+		</event>
 	</transition>
 	<transition>
 		<id>3</id>
@@ -130,6 +148,14 @@
 				<behavior>editable</behavior>
 			</logic>
 		</dataRef>
+		<event type="finish">
+			<id>skontrolovana_action</id>
+			<actions phase="pre">
+				<action>
+					checked: f.skontrolovana; assert checked.value; 
+				</action>
+			</actions>
+		</event>
 	</transition>
 	<!-- PLACES -->
 	<place>
