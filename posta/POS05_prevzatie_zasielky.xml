@@ -86,7 +86,7 @@
 		<dataRef>
 			<id>skontrolovana_id</id>
 			<logic>
-				<behavior>visible</behavior>
+				<behavior>required</behavior>
 				<behavior>editable</behavior>
 			</logic>
 		</dataRef>
@@ -144,7 +144,7 @@
 		<dataRef>
 			<id>skontrolovana</id>
 			<logic>
-				<behavior>visible</behavior>
+				<behavior>required</behavior>
 				<behavior>editable</behavior>
 			</logic>
 		</dataRef>

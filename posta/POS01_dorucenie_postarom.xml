@@ -171,18 +171,6 @@
                 <behavior>visible</behavior>
             </logic>
         </dataRef>
-		<dataRef>
-			<id>name</id>
-			<logic>
-				<behavior>visible</behavior>
-			</logic>
-		</dataRef>
-		<dataRef>
-			<id>surname</id>
-			<logic>
-				<behavior>visible</behavior>
-			</logic>
-		</dataRef>
 	</transition>
 	<transition>
 		<id>31</id>
