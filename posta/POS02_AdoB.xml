@@ -118,6 +118,14 @@
 				<behavior>editable</behavior>
 			</logic>
 		</dataRef>
+		<event type="finish">
+			<id>overenie_action</id>
+			<actions phase="pre">
+			  <action>
+				checked: f.overenie; assert checked.value.size() == checked.choices.size();
+			  </action>
+			</actions>
+		  </event>
 	</transition>
 	<!-- PLACES -->
 	<place>
